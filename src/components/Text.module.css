@@ -1,0 +1,28 @@
+.root {
+  color: inherit;
+  font-family: Poppins, Roboto, Arial, sans-serif;
+}
+
+.weight-light {
+  font-weight: 200;
+}
+
+.weight-medium {
+  font-weight: 400;
+}
+
+.weight-bold {
+  font-weight: 600;
+}
+
+.textAlign-start {
+  text-align: start;
+}
+
+.textAlign-center {
+  text-align: center;
+}
+
+.textAlign-end {
+  text-align: end;
+}

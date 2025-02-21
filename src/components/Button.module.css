@@ -1,0 +1,87 @@
+.root {
+  font-family: Poppins, Roboto, Arial, sans-serif;
+  position: relative;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border: 0;
+}
+
+.root > .bg {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 8px currentColor;
+  transition: box-shadow 300ms;
+  pointer-events: none;
+}
+
+.root-label-top {
+  margin-top: 25px;
+}
+
+.root-label-bottom {
+  margin-bottom: 25px;
+}
+
+
+.root:active > .bg {
+  box-shadow: 0px 0px 2px currentColor;
+}
+
+.root.size-medium {
+  width: 36px;
+  height: 36px;
+}
+.root.size-large {
+  width: 42px;
+  height: 42px;
+}
+.root.size-small {
+  width: 28px;
+  height: 28px;
+}
+
+.label {
+  position: absolute;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.label-top {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.label-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.icon {
+  color: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+}
+
+.root.size-large .icon {
+  font-size: 1rem;
+}
+
+.root.size-medium .icon {
+  color: inherit;
+  font-size: 1.5rem;
+}
+
+.root.size-large .icon {
+  font-size: 2rem;
+}

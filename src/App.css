@@ -1,0 +1,82 @@
+.App {
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.p1 {
+  padding: 4px;
+}
+.p2 {
+  padding: 8px;
+}
+.p3 {
+  padding: 12px;
+}
+.p4 {
+  padding: 16px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row.s1 > :not(:last-child) {
+  margin-inline-end: 8px;
+}
+.row.s2 > :not(:last-child) {
+  margin-inline-end: 16px;
+}
+.row.s3 > :not(:last-child) {
+  margin-inline-end: 24px;
+}
+.col.s1 > :not(:last-child) {
+  margin-block-end: 8px;
+}
+.col.s2 > :not(:last-child) {
+  margin-block-end: 16px;
+}
+.col.s3 > :not(:last-child) {
+  margin-block-end: 24px;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.arrow {
+  width: 2px;
+  background-image: linear-gradient(
+    var(--primary) 50%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: center;
+  background-size: 2px 14px;
+  background-repeat: repeat-y;
+}
