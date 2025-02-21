@@ -1,0 +1,36 @@
+import os
+from enum import Enum
+
+class Algorithm(Enum):
+    HIST = 1
+    LDV2 = 2
+
+
+RPI = os.uname()[4].startswith("arm") 
+
+INITIAL_WRAPPING = [120, 33, 0, 200]
+INITIAL_FILTER = [0, 255, 0, 255, 60, 255]
+INITIAL_DETECTION = [50, 150, 180, 32, 50]
+FRAME_WIDTH, FRAME_HEIGHT = 480, 270
+# 27 17 24 23
+IO_DRIVE_P = 17
+IO_DRIVE_N = 27
+IO_STEER_P = 23
+IO_STEER_N = 24
+STEERING_RADIUS = 54.45
+IO_INTRRUPTER = 16
+IO_STABILIZER = 12
+WHEEL_RADIUS = 2.25
+TICKS_PER_WHEEL = 10
+STABILIZER_DELTA_MAX = 32.5
+STABILIZER_SMOOTHING = 1
+ENABLE_SERVER = True
+BUFFER_SIZE = 36
+
+
+MODE_SELF_DRIVING = "self-driving"
+MODE_SELF_PARKING = "self-parking"
+MODE_IDLE = "idle"
+MODE_CONTROL = "control"
+
+ALG = Algorithm.LDV2
