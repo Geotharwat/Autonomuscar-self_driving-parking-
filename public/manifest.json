@@ -1,0 +1,21 @@
+{
+  "name": "Self driving car",
+  "short_name": "SDC",
+  "description": "Progressive Web App that controls the car",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "#1f64e7",
+  "background_color": "#eeeeee"
+}
