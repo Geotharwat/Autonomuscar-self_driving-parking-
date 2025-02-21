@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  client:
+    image: mouzidan/blaze-client
+    build:
+      context: ./client
+    container_name: client
+    depends_on:
+      - message-broker
+  api:
+    image: mouzidan/blaze-api
+    build:
+      context: ./api
+    container_name: api
+    environment:
+      - REDIS_URL=redis://message-broker:6379
+    depends_on:
+      - message-broker
+    ports:
+      - "2100:80"
+  live:
+    image: mouzidan/blaze-live
+    build:
+      context: ./live
+    container_name: live
+    environment:
+      - REDIS_HOST=message-broker
+      - REDIS_PORT=6379
+    depends_on:
+      - message-broker
+  message-broker:
+    image: mouzidan/blaze-message-broker
+    build:
+      context: .
+      dockerfile: message-broker.Dockerfile
+    container_name: message-broker
+    ports:
+      - "6379:6379"
+  gateway:
+    image: mouzidan/blaze-gateway
+    build:
+      context: .
+      dockerfile: gateway.Dockerfile
+    container_name: gateway
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+      - client
+      - live
